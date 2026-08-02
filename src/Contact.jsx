@@ -1,9 +1,9 @@
 export default function Contact() {
   return (
     <div className="flex flex-col grow bg-white">
-      {/* Hero Section */}
-      <section className="bg-slate-900 py-20 px-6 lg:px-8 text-center border-b border-slate-800">
-        <div className="max-w-3xl mx-auto">
+      {/* Hero Section - Now full height with bouncing arrow */}
+      <section className="bg-slate-900 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20 px-6 lg:px-8 text-center border-b border-slate-800 relative">
+        <div className="max-w-3xl mx-auto w-full">
           <h1 className="text-4xl font-serif font-bold tracking-tight text-white sm:text-5xl mb-6">
             Let's Talk About Your Book
           </h1>
@@ -13,10 +13,39 @@ export default function Contact() {
             good fit, we will reach out to schedule a free strategy call.
           </p>
         </div>
+
+        {/* Bouncing Arrow */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <a
+            href="#inquiry-form"
+            className="flex flex-col items-center text-white/70 hover:text-white transition-colors animate-bounce"
+          >
+            <span className="text-xs uppercase tracking-widest font-semibold mb-2">
+              Fill Out the Form
+            </span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </div>
       </section>
 
       {/* Form & Contact Info Section */}
-      <section className="py-24 px-6 lg:px-8 max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <section
+        id="inquiry-form"
+        className="py-24 px-6 lg:px-8 max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-16 scroll-mt-20"
+      >
         {/* Left Column: The Qualifying Form */}
         <div className="lg:col-span-2 bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm">
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-8">

@@ -270,9 +270,9 @@ export default function Affiliates() {
 
   return (
     <div className="flex flex-col grow bg-white">
-      {/* Hero Section */}
-      <section className="bg-slate-50 py-20 px-6 lg:px-8 border-b border-gray-200 text-center">
-        <div className="max-w-3xl mx-auto">
+      {/* Hero Section - Now full height with bouncing arrow */}
+      <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20 px-6 lg:px-8 border-b border-gray-200 text-center relative">
+        <div className="max-w-3xl mx-auto w-full">
           <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
             Recommended Resources
           </h1>
@@ -284,7 +284,7 @@ export default function Affiliates() {
           </p>
 
           {/* FTC Disclosure */}
-          <div className="bg-white border border-gray-200 rounded-lg p-4 max-w-2xl mx-auto shadow-sm">
+          <div className="bg-white border border-gray-200 rounded-lg p-4 max-w-2xl mx-auto shadow-sm mb-4">
             <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">
               Affiliate Disclosure
             </p>
@@ -297,10 +297,39 @@ export default function Affiliates() {
             </p>
           </div>
         </div>
+
+        {/* Bouncing Arrow */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <a
+            href="#resources-grid"
+            className="flex flex-col items-center text-gray-400 hover:text-red-800 transition-colors animate-bounce"
+          >
+            <span className="text-xs uppercase tracking-widest font-semibold mb-2">
+              Explore Resources
+            </span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </div>
       </section>
 
       {/* Affiliates Grid */}
-      <section className="py-24 px-6 lg:px-8 max-w-6xl mx-auto">
+      <section
+        id="resources-grid"
+        className="py-24 px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-20"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {affiliates.map((item) => (
             <div

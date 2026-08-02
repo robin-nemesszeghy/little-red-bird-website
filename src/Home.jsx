@@ -7,7 +7,7 @@ import singingBirdAnimation from "./assets/singing-bird.json";
 
 // Import your centralized data files
 import { booksData } from "./data/booksData";
-import { testimonialsData } from "./data/testimonialsData"; // <-- This is the crucial new link!
+import { testimonialsData } from "./data/testimonialsData";
 
 export default function Home() {
   // Dynamically pull only the books marked as "isFeatured" from our data file
@@ -32,9 +32,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col grow">
-      {/* 2-Column Hero Section */}
-      <section className="bg-slate-50 py-16 px-6 sm:py-24 lg:px-8 border-b border-gray-200 overflow-hidden relative">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      {/* 2-Column Hero Section - Now full height with arrow */}
+      <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-16 px-6 sm:py-24 lg:px-8 border-b border-gray-200 overflow-hidden relative">
+        <div className="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left Column: Text & Buttons */}
           <div className="text-center lg:text-left pointer-events-auto">
             <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-6xl mb-6">
@@ -92,10 +92,39 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Bouncing Arrow */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <a
+            href="#services-overview"
+            className="flex flex-col items-center text-gray-400 hover:text-red-800 transition-colors animate-bounce"
+          >
+            <span className="text-xs uppercase tracking-widest font-semibold mb-2">
+              Explore Services
+            </span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-6 lg:px-8 bg-white">
+      <section
+        id="services-overview"
+        className="py-24 px-6 lg:px-8 bg-white scroll-mt-20"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-bold tracking-tight text-gray-900 sm:text-4xl">

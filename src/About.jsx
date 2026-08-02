@@ -24,8 +24,8 @@ export default function About() {
 
   return (
     <div className="flex flex-col grow bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-slate-900 py-32 px-6 lg:px-8 text-center overflow-hidden">
+      {/* Hero Section - Now full height with Start Here arrow */}
+      <section className="relative bg-slate-900 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-32 px-6 lg:px-8 text-center overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Hero+Background')] bg-cover bg-center opacity-30 mix-blend-overlay"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -60,21 +60,47 @@ export default function About() {
             </Link>
           </div>
         </div>
+
+        {/* Start Here Bouncing Arrow */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <a
+            href="#foundations"
+            className="flex flex-col items-center text-white/70 hover:text-white transition-colors animate-bounce"
+          >
+            <span className="text-xs uppercase tracking-widest font-semibold mb-2">
+              Start Here
+            </span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </div>
       </section>
 
-      {/* 00 - Start Here & Badges */}
-      <section className="py-24 px-6 lg:px-8 bg-white text-center border-b border-gray-200">
+      {/* 00 - Foundations (Replaces old Start Here) */}
+      <section
+        id="foundations"
+        className="py-24 px-6 lg:px-8 bg-white text-center border-b border-gray-200 scroll-mt-20"
+      >
         <div className="max-w-5xl mx-auto">
           <div className="mb-16">
             <span className="text-8xl font-serif font-bold text-slate-100 block -mb-8 select-none">
               00
             </span>
             <h2 className="text-3xl font-serif font-bold text-gray-900 relative z-10">
-              Start Here
-            </h2>
-            <p className="mt-4 text-gray-500 uppercase tracking-widest text-xs font-semibold">
               Ensuring you build the foundations you need
-            </p>
+            </h2>
           </div>
 
           {/* 4-Step Grid */}

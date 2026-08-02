@@ -16,9 +16,9 @@ export default function Portfolio() {
 
   return (
     <div className="flex flex-col grow bg-white">
-      {/* Page Header */}
-      <section className="bg-slate-50 py-20 px-6 border-b border-gray-200 text-center">
-        <div className="max-w-3xl mx-auto">
+      {/* Page Header - Now full height with bouncing arrow */}
+      <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20 px-6 border-b border-gray-200 text-center relative">
+        <div className="max-w-3xl mx-auto w-full">
           <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
             Our Published Books
           </h1>
@@ -27,10 +27,39 @@ export default function Portfolio() {
             distinct honor of helping bring into the world.
           </p>
         </div>
+
+        {/* Bouncing Arrow */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <a
+            href="#book-grid"
+            className="flex flex-col items-center text-gray-400 hover:text-red-800 transition-colors animate-bounce"
+          >
+            <span className="text-xs uppercase tracking-widest font-semibold mb-2">
+              Browse the Books
+            </span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </div>
       </section>
 
       {/* Portfolio Grid & Filters */}
-      <section className="py-16 px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <section
+        id="book-grid"
+        className="py-16 px-6 lg:px-8 max-w-7xl mx-auto w-full scroll-mt-20"
+      >
         {/* Interactive Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-16">
           {uniqueGenres.map((category) => (

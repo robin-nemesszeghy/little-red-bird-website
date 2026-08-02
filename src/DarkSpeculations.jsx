@@ -6,12 +6,12 @@ import horrorGenresMap from "./assets/horror-genres.png"; // <-- Imported your n
 export default function DarkSpeculations() {
   return (
     <div className="flex flex-col grow bg-slate-950 text-slate-300 selection:bg-red-900 selection:text-white">
-      {/* 1. Dark Immersive Hero */}
-      <section className="relative py-32 px-6 lg:px-8 text-center overflow-hidden border-b border-slate-800">
+      {/* 1. Dark Immersive Hero - Now full height with arrow */}
+      <section className="relative min-h-[calc(100vh-5rem)] flex flex-col justify-center py-32 px-6 lg:px-8 text-center overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Dark+Forest+Road')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 to-slate-950"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="relative z-10 max-w-4xl mx-auto w-full">
           <div className="text-red-700 text-4xl mb-6">🪶</div>
           <h2 className="text-sm font-semibold tracking-widest uppercase text-red-600 mb-4">
             Little Red Bird Literary Presents
@@ -35,6 +35,32 @@ export default function DarkSpeculations() {
             View Submission Guidelines
           </a>
         </div>
+
+        {/* Bouncing Arrow (Dark Theme) */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+          <a
+            href="#collection"
+            className="flex flex-col items-center text-slate-500 hover:text-red-500 transition-colors animate-bounce"
+          >
+            <span className="text-xs uppercase tracking-widest font-semibold mb-2">
+              View The Collection
+            </span>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </a>
+        </div>
       </section>
 
       {/* 2. Status Banner */}
@@ -49,7 +75,10 @@ export default function DarkSpeculations() {
       </div>
 
       {/* 3. The Anthology Showcase */}
-      <section className="py-24 px-6 lg:px-8 max-w-7xl mx-auto">
+      <section
+        id="collection"
+        className="py-24 px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-20"
+      >
         <div className="text-center mb-16">
           <h2 className="text-3xl font-serif font-bold text-slate-100">
             The Collection
