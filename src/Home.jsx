@@ -10,12 +10,10 @@ import { booksData } from "./data/booksData";
 import { testimonialsData } from "./data/testimonialsData";
 
 export default function Home() {
-  // Dynamically pull only the books marked as "isFeatured" from our data file
   const featuredBooks = booksData
     .filter((book) => book.isFeatured)
     .slice(0, 10);
 
-  // Carousel State using the imported data
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const nextTestimonial = () => {
@@ -32,8 +30,8 @@ export default function Home() {
 
   return (
     <div className="flex flex-col grow">
-      {/* 2-Column Hero Section - Now full height with arrow */}
-      <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-16 px-6 sm:py-24 lg:px-8 border-b border-gray-200 overflow-hidden relative">
+      {/* 2-Column Hero Section - Added pb-32 for mobile arrow clearance */}
+      <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-16 px-6 sm:py-24 pb-32 lg:pb-0 lg:px-8 border-b border-gray-200 overflow-hidden relative">
         <div className="mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left Column: Text & Buttons */}
           <div className="text-center lg:text-left pointer-events-auto">
@@ -61,8 +59,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right Column: Stack of Books & Bird Visual */}
-          <div className="relative w-full max-w-md mx-auto aspect-square flex justify-center items-center z-30">
+          {/* Right Column: Stack of Books & Bird Visual (Added mt-12 for mobile) */}
+          <div className="relative w-full max-w-md mx-auto aspect-square flex justify-center items-center z-30 mt-12 lg:mt-0">
             <div className="absolute inset-0 bg-red-100/60 rounded-full blur-3xl w-3/4 h-3/4 m-auto z-0"></div>
 
             <div className="relative z-10 flex flex-col items-center justify-center drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
@@ -94,7 +92,7 @@ export default function Home() {
         </div>
 
         {/* Bouncing Arrow */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+        <div className="absolute bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 z-20">
           <a
             href="#services-overview"
             className="flex flex-col items-center text-gray-400 hover:text-red-800 transition-colors animate-bounce"
@@ -208,7 +206,6 @@ export default function Home() {
             bring to the world.
           </p>
 
-          {/* Featured Grid using real data */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-12">
             {featuredBooks.map((book) => (
               <a
@@ -224,7 +221,6 @@ export default function Home() {
                   alt={book.title}
                   className="w-full h-full object-cover"
                 />
-                {/* Subtle overlay on hover indicating it links out */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <span className="text-white text-xs font-bold uppercase tracking-widest px-3 py-1 border border-white/50 rounded-full backdrop-blur-sm">
                     View
@@ -234,7 +230,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Button linking to dedicated Portfolio page */}
           <Link
             to="/portfolio"
             className="inline-block rounded-md bg-white border border-gray-300 px-8 py-3.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 transition-colors uppercase tracking-widest"
@@ -257,11 +252,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Carousel Container */}
           <div className="relative">
-            {/* The Active Testimonial Card */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white/5 p-8 sm:p-12 rounded-2xl border border-white/10 backdrop-blur-sm min-h-[300px]">
-              {/* Headshot or Fallback Icon */}
               {testimonialsData[currentTestimonial].image ? (
                 <img
                   src={testimonialsData[currentTestimonial].image}
@@ -287,14 +279,12 @@ export default function Home() {
                     {testimonialsData[currentTestimonial].role}
                   </span>
                 </div>
-                {/* 5-Star Rating */}
                 <div className="text-amber-400 text-lg mt-3 flex justify-center md:justify-start gap-1">
                   ★★★★★
                 </div>
               </div>
             </div>
 
-            {/* Carousel Navigation Buttons */}
             <div className="flex justify-center items-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
@@ -304,7 +294,6 @@ export default function Home() {
                 &larr;
               </button>
 
-              {/* Dots indicator */}
               <div className="flex gap-2">
                 {testimonialsData.map((_, index) => (
                   <button

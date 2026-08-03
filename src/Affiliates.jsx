@@ -270,7 +270,6 @@ export default function Affiliates() {
 
   return (
     <div className="flex flex-col grow bg-white">
-      {/* Hero Section - Now full height with bouncing arrow */}
       <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20 px-6 lg:px-8 border-b border-gray-200 text-center relative">
         <div className="max-w-3xl mx-auto w-full">
           <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
@@ -283,7 +282,6 @@ export default function Affiliates() {
             their platform.
           </p>
 
-          {/* FTC Disclosure */}
           <div className="bg-white border border-gray-200 rounded-lg p-4 max-w-2xl mx-auto shadow-sm mb-4">
             <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">
               Affiliate Disclosure
@@ -298,7 +296,6 @@ export default function Affiliates() {
           </div>
         </div>
 
-        {/* Bouncing Arrow */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
           <a
             href="#resources-grid"
@@ -325,7 +322,6 @@ export default function Affiliates() {
         </div>
       </section>
 
-      {/* Affiliates Grid */}
       <section
         id="resources-grid"
         className="py-24 px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-20"
@@ -336,16 +332,15 @@ export default function Affiliates() {
               key={item.id}
               className="flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Banner Image */}
-              <div className="bg-slate-100 aspect-[2/1] relative border-b border-gray-100 p-6 flex items-center justify-center">
+              {/* Added explicit text-center and mx-auto class inside this div */}
+              <div className="bg-slate-100 aspect-[2/1] relative border-b border-gray-100 p-6 flex items-center justify-center text-center">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="w-full h-full object-contain drop-shadow-sm hover:scale-105 transition-transform duration-300"
+                  className="max-w-full max-h-full object-contain mx-auto drop-shadow-sm hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
-              {/* Content */}
               <div className="p-8 flex flex-col grow">
                 <h3 className="text-xl font-serif font-bold text-gray-900 mb-3">
                   {item.name}
@@ -354,7 +349,6 @@ export default function Affiliates() {
                   {item.description}
                 </p>
 
-                {/* Dynamically render multiple buttons if applicable */}
                 <div className="flex flex-col gap-3">
                   {item.links.map((linkObj, idx) => (
                     <a

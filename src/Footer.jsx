@@ -9,10 +9,11 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-gray-300 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        {/* Added text-center md:text-left to nicely center on mobile and revert to left on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12 text-center md:text-left">
           {/* Brand Info */}
           <div>
-            <h3 className="font-serif text-lg font-bold text-white uppercase tracking-wider mb-2">
+            <h3 className="font-serif text-lg md:text-xl font-bold text-white uppercase tracking-wider mb-2">
               Little Red Bird Publishing
             </h3>
             <p className="text-xs text-red-400 uppercase tracking-widest mb-4">
@@ -162,8 +163,8 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* BADGES ROW */}
-            <div className="flex items-center gap-3 mt-1 mb-2">
+            {/* BADGES ROW - Using justify-center on mobile, left on md */}
+            <div className="flex items-center justify-center md:justify-start gap-3 mt-1 mb-2">
               <a
                 href="https://authoraccelerator.teachable.com/courses/certification-fiction?affcode=27214_kgd9mbva"
                 target="_blank"
@@ -212,8 +213,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+        {/* Copyright - Centered on mobile */}
+        <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left text-xs text-gray-500">
           <p>
             © {new Date().getFullYear()} Little Red Bird Publishing. All rights
             reserved.

@@ -44,7 +44,7 @@ export default function Services() {
 
   return (
     <div className="flex flex-col grow bg-white">
-      {/* Hero Section - Now full height with arrow */}
+      {/* Hero Section */}
       <section className="bg-slate-50 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-20 px-6 lg:px-8 border-b border-gray-200 text-center relative">
         <div className="max-w-4xl mx-auto w-full">
           <h1 className="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
@@ -56,7 +56,6 @@ export default function Services() {
             you exactly where you are.
           </p>
 
-          {/* Page Navigation Links */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <a
               href="#book-coaching"
@@ -244,9 +243,7 @@ export default function Services() {
               and could devote all that time and energy to doing more of what
               you love instead?
             </p>
-
             <div className="flex justify-center text-red-800/30">❦</div>
-
             <p className="text-xl md:text-2xl text-gray-700 italic font-serif leading-relaxed">
               <span className="font-semibold text-gray-900">
                 How would it feel
@@ -259,21 +256,16 @@ export default function Services() {
               </strong>
               ?
             </p>
-
             <div className="flex justify-center text-red-800/30">❦</div>
-
             <p className="text-xl md:text-2xl text-gray-700 italic font-serif leading-relaxed">
               <span className="font-semibold text-gray-900">Imagine</span> you
               had someone take care of the entire process for you and had your
               dream book published under your name a month from now.
             </p>
-
             <p className="text-lg font-bold text-gray-900 uppercase tracking-widest pt-4">
               What would that be worth?
             </p>
-
             <div className="flex justify-center text-red-800/30">❦</div>
-
             <p className="text-xl md:text-2xl text-gray-700 italic font-serif leading-relaxed">
               <span className="font-semibold text-gray-900">What if</span> I
               told you I could do all this for you and more,{" "}
@@ -285,7 +277,6 @@ export default function Services() {
             </p>
           </div>
 
-          {/* Extracted Header Text */}
           <div className="mb-6 text-center">
             <h3 className="font-serif font-bold text-2xl md:text-3xl text-gray-900 mb-2">
               Enter... Full Service Self-Publishing.
@@ -310,7 +301,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* YouTube Video Embed */}
         <div className="max-w-4xl mx-auto mb-16 aspect-video w-full rounded-xl shadow-lg relative overflow-hidden border border-gray-200">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
@@ -322,7 +312,6 @@ export default function Services() {
           ></iframe>
         </div>
 
-        {/* 2-in-1 Value Prop */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div className="bg-white border-t-4 border-t-red-600 shadow-lg rounded-b-xl p-8 text-center">
             <div className="w-12 h-12 bg-red-100 text-red-800 rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
@@ -358,7 +347,6 @@ export default function Services() {
           </div>
         </div>
 
-        {/* What's Included Checklist */}
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-12 mb-12">
           <h3 className="text-2xl font-serif font-bold text-gray-900 mb-8 text-center">
             What's Included
@@ -459,7 +447,6 @@ export default function Services() {
             </ul>
           </div>
 
-          {/* Disclaimers */}
           <div className="mt-8 pt-8 border-t border-slate-200 text-xs text-gray-600 space-y-4">
             <p>
               *{" "}
@@ -493,16 +480,17 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="text-center">
+        {/* Updated Button Container for Mobile Stacking */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <Link
             to="/contact"
-            className="rounded-md bg-red-800 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition-colors uppercase tracking-widest mx-2"
+            className="w-full sm:w-auto text-center rounded-md bg-red-800 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700 transition-colors uppercase tracking-widest"
           >
             Book Your Free Strategy Session
           </Link>
           <Link
             to="/portfolio"
-            className="rounded-md bg-amber-500 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-400 transition-colors uppercase tracking-widest mx-2 mt-4 sm:mt-0 inline-block"
+            className="w-full sm:w-auto text-center rounded-md bg-amber-500 px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-400 transition-colors uppercase tracking-widest"
           >
             View Previous Full Serviced Books
           </Link>
@@ -611,8 +599,6 @@ export default function Services() {
             Get your questions answered
           </p>
         </div>
-
-        {/* FAQ Video Embed */}
         <div className="mb-12 aspect-video w-full rounded-xl shadow-lg relative overflow-hidden border border-gray-200">
           <iframe
             className="absolute top-0 left-0 w-full h-full"
@@ -623,7 +609,6 @@ export default function Services() {
             allowFullScreen
           ></iframe>
         </div>
-
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
@@ -641,13 +626,8 @@ export default function Services() {
                   {openFaq === index ? "−" : "+"}
                 </span>
               </button>
-
               <div
-                className={`px-6 text-sm text-gray-600 leading-relaxed transition-all duration-300 ease-in-out ${
-                  openFaq === index
-                    ? "max-h-48 py-4 border-t border-gray-100 opacity-100"
-                    : "max-h-0 py-0 opacity-0"
-                }`}
+                className={`px-6 text-sm text-gray-600 leading-relaxed transition-all duration-300 ease-in-out ${openFaq === index ? "max-h-48 py-4 border-t border-gray-100 opacity-100" : "max-h-0 py-0 opacity-0"}`}
               >
                 {faq.answer}
               </div>

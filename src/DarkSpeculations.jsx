@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import darkSpeculationsVol1 from "./assets/covers/dark-speculations-vol-1.jpg";
 import darkSpeculationsVol2 from "./assets/covers/dark-speculations-vol-2.jpg";
-import horrorGenresMap from "./assets/horror-genres.png"; // <-- Imported your new graphic!
+import horrorGenresMap from "./assets/horror-genres.png";
 
 export default function DarkSpeculations() {
   return (
@@ -64,14 +64,23 @@ export default function DarkSpeculations() {
       </section>
 
       {/* 2. Status Banner */}
-      <div className="bg-red-950/80 border-y border-red-900 py-6 px-6 text-center backdrop-blur-sm sticky top-20 z-40">
+      <div className="bg-red-950/80 border-y border-red-900 py-8 px-6 text-center backdrop-blur-sm sticky top-20 z-40">
         <h3 className="text-xl font-bold text-red-50 uppercase tracking-widest">
           We Are Currently CLOSED for Submissions!
         </h3>
-        <p className="text-red-200 text-sm mt-2">
+        <p className="text-red-200 text-sm mt-2 mb-4">
           Read our submission guidelines below and prepare your stories for our
           next reading window.
         </p>
+        <a
+          href="#feedback"
+          className="inline-block bg-red-900/40 border border-red-500/30 rounded-md px-6 py-3 hover:bg-red-900/60 transition-colors cursor-pointer group"
+        >
+          <p className="text-amber-400 text-sm font-bold tracking-wide group-hover:text-amber-300">
+            Note: We are STILL ACCEPTING submissions for our $5 Editorial
+            Feedback option! Click here for details.
+          </p>
+        </a>
       </div>
 
       {/* 3. The Anthology Showcase */}
@@ -548,15 +557,19 @@ export default function DarkSpeculations() {
       </section>
 
       {/* 7. Feedback Upsell */}
-      <section className="py-16 px-6 lg:px-8 max-w-4xl mx-auto">
+      <section
+        id="feedback"
+        className="py-16 px-6 lg:px-8 max-w-4xl mx-auto scroll-mt-24"
+      >
         <div className="bg-gradient-to-r from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-8 md:p-12 text-center shadow-xl">
           <h3 className="text-2xl font-serif font-bold text-slate-100 mb-4">
             Want Editorial Feedback?
           </h3>
           <p className="text-slate-400 text-sm mb-6 max-w-2xl mx-auto leading-relaxed">
-            For $5, we offer the option of receiving feedback on your story
-            submission. This includes a brief editorial summary detailing what
-            worked well and what needs improvement.
+            Even while we are closed to general submissions, we still offer the
+            option of receiving editorial feedback on your story for $5. This
+            includes a brief editorial summary detailing what worked well and
+            what needs improvement.
           </p>
           <p className="text-xs text-slate-500 mb-8 max-w-2xl mx-auto">
             Payment is made via Ko-fi. Be sure to include the comment
