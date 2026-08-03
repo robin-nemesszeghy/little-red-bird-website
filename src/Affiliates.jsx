@@ -332,12 +332,12 @@ export default function Affiliates() {
               key={item.id}
               className="flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Added explicit text-center and mx-auto class inside this div */}
-              <div className="bg-slate-100 aspect-[2/1] relative border-b border-gray-100 p-6 flex items-center justify-center text-center">
+              {/* BUG FIX: Absolute positioning forces the image to perfectly obey the parent bounds on all devices */}
+              <div className="bg-slate-100 w-full aspect-[2/1] relative border-b border-gray-100 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="max-w-full max-h-full object-contain mx-auto drop-shadow-sm hover:scale-105 transition-transform duration-300"
+                  className="absolute inset-0 w-full h-full p-6 object-contain object-center drop-shadow-sm hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
