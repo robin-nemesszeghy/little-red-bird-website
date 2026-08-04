@@ -155,26 +155,45 @@ export default function About() {
             </h3>
 
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-8">
+              {/* Redirecting to PDFs for credibility! */}
               <div className="flex flex-col items-center">
-                <img
-                  src={badgeFiction}
-                  alt="Fiction Badge"
-                  className="h-24 w-auto drop-shadow-md hover:scale-105 transition-transform"
-                />
+                <a
+                  href="/certificates/author-accelerator-fiction-certificate.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={badgeFiction}
+                    alt="Fiction Badge"
+                    className="h-24 w-auto drop-shadow-md hover:scale-105 transition-transform"
+                  />
+                </a>
               </div>
               <div className="flex flex-col items-center">
-                <img
-                  src={badgeNonfiction}
-                  alt="Nonfiction Badge"
-                  className="h-24 w-auto drop-shadow-md hover:scale-105 transition-transform"
-                />
+                <a
+                  href="/certificates/author-accelerator-nonfiction-certificate.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={badgeNonfiction}
+                    alt="Nonfiction Badge"
+                    className="h-24 w-auto drop-shadow-md hover:scale-105 transition-transform"
+                  />
+                </a>
               </div>
               <div className="flex flex-col items-center">
-                <img
-                  src={badgeMemoir}
-                  alt="Memoir Badge"
-                  className="h-24 w-auto drop-shadow-md hover:scale-105 transition-transform"
-                />
+                <a
+                  href="/certificates/author-accelerator-memoir-certificate.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={badgeMemoir}
+                    alt="Memoir Badge"
+                    className="h-24 w-auto drop-shadow-md hover:scale-105 transition-transform"
+                  />
+                </a>
               </div>
             </div>
 
@@ -318,7 +337,7 @@ export default function About() {
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 We are your cheerleaders. Expect prompt communication, warm
-                encouragement, and a true collaborative partnership.
+                encourangement, and a true collaborative partnership.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">

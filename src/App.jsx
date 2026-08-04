@@ -8,6 +8,7 @@ import About from "./About";
 import DarkSpeculations from "./DarkSpeculations";
 import Contact from "./Contact";
 import Affiliates from "./Affiliates"; // <-- Newly imported Affiliates page!
+import Copywriting from "./Copywriting"; // <-- Newly imported Copywriting page!
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/dark-speculations" element={<DarkSpeculations />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/affiliates" element={<Affiliates />} />
+            <Route path="/copywriting" element={<Copywriting />} />
           </Routes>
         </main>
 

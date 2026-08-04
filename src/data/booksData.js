@@ -140,7 +140,7 @@ export const booksData = [
     isFeatured: true,
   },
   {
-    id: 26, // <-- Newly added book!
+    id: 26,
     title: "A Piece of My Life Story",
     author: "Blessing Johansson",
     image: lifeStory,
@@ -221,8 +221,7 @@ export const booksData = [
     title: "Behind the Firewall",
     author: "Robin Nemesszeghy",
     image: behindTheFirewall,
-    amazonLink:
-      "https://www.amazon.com/Behind-Firewall-Echo-Protocol-Book-ebook/dp/B0FR2N9GM5/",
+    amazonLink: "https://mybook.to/BehindTheFirewall",
     genre: "Sci-Fi / Technothriller",
     isFeatured: false,
   },

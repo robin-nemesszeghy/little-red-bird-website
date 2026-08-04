@@ -137,8 +137,10 @@ export default function Footer() {
               <span className="font-semibold text-gray-300 uppercase tracking-wider text-[10px] mb-1">
                 Author Accelerator Certified:
               </span>
+
+              {/* TEXT LINKS -> Redirect to PDF Certificates */}
               <a
-                href="https://authoraccelerator.teachable.com/courses/certification-fiction?affcode=27214_kgd9mbva"
+                href="/certificates/author-accelerator-fiction-certificate.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-red-400 transition-colors"
@@ -146,7 +148,7 @@ export default function Footer() {
                 Fiction Book Coach
               </a>
               <a
-                href="https://authoraccelerator.teachable.com/courses/certification-nonfiction?affcode=27214_kgd9mbva"
+                href="/certificates/author-accelerator-nonfiction-certificate.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-red-400 transition-colors"
@@ -154,7 +156,7 @@ export default function Footer() {
                 Nonfiction Book Coach
               </a>
               <a
-                href="https://authoraccelerator.teachable.com/courses/certification-memoir?affcode=27214_kgd9mbva"
+                href="/certificates/author-accelerator-memoir-certificate.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-red-400 transition-colors"
@@ -163,7 +165,7 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* BADGES ROW - Using justify-center on mobile, left on md */}
+            {/* BADGES ROW - Keep these as affiliate links! */}
             <div className="flex items-center justify-center md:justify-start gap-3 mt-1 mb-2">
               <a
                 href="https://authoraccelerator.teachable.com/courses/certification-fiction?affcode=27214_kgd9mbva"
