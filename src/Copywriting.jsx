@@ -16,9 +16,9 @@ export default function Copywriting() {
   return (
     <div className="flex flex-col grow bg-slate-50">
       {/* 1. Hero Section */}
-      <section className="bg-slate-950 text-slate-100 py-32 px-6 lg:px-8 text-center relative overflow-hidden border-b border-slate-800">
+      <section className="bg-slate-950 text-slate-100 min-h-[calc(100vh-5rem)] flex flex-col justify-center py-32 px-6 lg:px-8 text-center relative overflow-hidden border-b border-slate-800">
         <div className="absolute inset-0 bg-[url('https://via.placeholder.com/1920x1080?text=Dark+Texture')] bg-cover bg-center opacity-10"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="relative z-10 max-w-4xl mx-auto w-full">
           <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-5xl mb-6">
             Professional Copywriting & Business Marketing
           </h1>
