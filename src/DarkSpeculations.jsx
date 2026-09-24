@@ -126,7 +126,7 @@ export default function DarkSpeculations() {
             </h3>
             <p className="text-sm text-slate-500 mt-2 mb-4 text-center line-clamp-3">
               A surreal journey through unraveling worlds, blending creeping
-              dread with existential wonder. (Oct 31/26).
+              dread with existential wonder. (Oct 31/26)
             </p>
             <a
               href="https://mybook.to/DarkSpeculationsV3"
