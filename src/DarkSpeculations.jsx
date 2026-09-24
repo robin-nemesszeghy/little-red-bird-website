@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import darkSpeculationsVol1 from "./assets/covers/dark-speculations-vol-1.jpg";
 import darkSpeculationsVol2 from "./assets/covers/dark-speculations-vol-2.jpg";
+import darkSpeculationsVol3 from "./assets/covers/dark-speculations-vol-3.jpg";
 import horrorGenresMap from "./assets/horror-genres.png";
 
 export default function DarkSpeculations() {
@@ -112,7 +113,7 @@ export default function DarkSpeculations() {
           <div className="flex flex-col items-center group">
             <div className="aspect-[2/3] w-full max-w-[280px] bg-slate-900 rounded-lg overflow-hidden shadow-2xl border border-slate-800 relative mb-6">
               <img
-                src="https://via.placeholder.com/400x600/000000/FFFFFF?text=Coming+Soon"
+                src={darkSpeculationsVol3}
                 alt="Volume 3"
                 className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
               />
@@ -123,9 +124,18 @@ export default function DarkSpeculations() {
             <h3 className="text-xl font-serif font-bold text-slate-100 text-center">
               Volume III
             </h3>
-            <p className="text-sm text-slate-500 mt-2">
-              Reading window closed. Publishing Oct 2026.
+            <p className="text-sm text-slate-500 mt-2 mb-4 text-center line-clamp-3">
+              A surreal journey through unraveling worlds, blending creeping
+              dread with existential wonder. (Oct 31/26).
             </p>
+            <a
+              href="https://mybook.to/DarkSpeculationsV3"
+              target="_blank"
+              rel="noreferrer"
+              className="text-xs font-bold uppercase tracking-widest text-red-500 hover:text-red-400 border-b border-red-500 pb-1"
+            >
+              Check Out Volume III
+            </a>
           </div>
 
           {/* Volume 2 */}

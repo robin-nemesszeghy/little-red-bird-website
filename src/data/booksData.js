@@ -7,6 +7,7 @@ import bennysStory from "../assets/covers/bennys-story.jpg";
 import convergencePoint from "../assets/covers/convergence-point.jpg";
 import darkSpeculationsVol1 from "../assets/covers/dark-speculations-vol-1.jpg";
 import darkSpeculationsVol2 from "../assets/covers/dark-speculations-vol-2.jpg";
+import darkSpeculationsVol3 from "../assets/covers/dark-speculations-vol-3.jpg";
 import fWordFaith from "../assets/covers/f-word-faith.jpg";
 import fWordForgiveness from "../assets/covers/f-word-forgiveness.jpg";
 import followTheFirstborn from "../assets/covers/follow-the-firstborn.jpg";
@@ -172,11 +173,10 @@ export const booksData = [
     id: 25,
     title: "Dark Speculations: Volume III",
     author: "Little Red Bird Publishing",
-    image: "https://via.placeholder.com/400x600/000000/FFFFFF?text=Coming+Soon",
-    amazonLink: "#",
+    image: darkSpeculationsVol3,
+    amazonLink: "https://mybook.to/DarkSpeculationsV3",
     genre: "Anthology / Horror",
     isFeatured: false,
-    isComingSoon: true,
   },
 
   // --- SCI-FI / TECHNOTHRILLER (ECHO PROTOCOL SERIES) ---
